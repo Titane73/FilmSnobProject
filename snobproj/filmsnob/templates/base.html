@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html style="font-family: 'Times New Roman', Times, serif;">
+
+<head>
+    <title>Film Snob</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div class='jumbotron' style="background-color: #1A0044; font-family:'Times New Roman', Times, serif; color: white;">
+        <h1>Film Snob</h1>
+    </div>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{% url 'index' %}">Welcome</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <!-- adds Resources to the navigation bar -->
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'movies' %}">Movies</a></li>
+                <li><a href="{% url 'newmovie' %}">Add Movie</a></li>
+                <li><a href="{% url 'newreview' %}">Add Review</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+
+
+
+            </ul>
+        </div>
+    </nav>
+    <p>&nbsp;</p>
+    <div class="container" style="font-family: 'Times New Roman', Times, serif;">
+        {% block content %}
+        {% endblock content %}
+    </div>
+</body>
+
+</html>

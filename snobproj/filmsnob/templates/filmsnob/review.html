@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div>
+<h1>{{ this_movie.movie_title }}</h1>
+<p>Director: {{ this_movie.movie_director }}</p>
+<p>{{ this_movie.movie_release }} | {{ this_movie.movie_rating }} | {{ this_movie.movie_length }}</p>
+
+
+    <p>Review Date: {{ review.review_date }} - My Rating: {{ review.review_rating }} </p>
+    <textarea>{{ review.review_text }}</textarea>
+
+
+
+</div>
+
+{% endblock content %}
